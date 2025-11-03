@@ -1,9 +1,18 @@
 package lotto.domain;
 
-public class LottoResult {
+import java.util.List;
 
-    public int getWiningResult(Lotto lotto) {
-        //TODO: 로또 당첨 결과 확인
-        return 0;
+public class LottoResult {
+    List<LottoRank> winingResult;
+
+    public void addWiningResult(Lotto lotto, WinningLotto winningLotto) {
+        long matchingCount = winningLotto.getMatchNumberCount(lotto);
+        boolean hasBonus = winningLotto.getMatchBonusNumber(lotto);
+        winingResult.add(LottoRank.getRank(matchingCount, hasBonus));
     }
+
+    public double calculateProfit(long money) {
+        return 0.0;
+    }
+
 }
