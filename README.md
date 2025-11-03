@@ -8,13 +8,15 @@
     * [x] 로또 번호가 6개 인지 확인한다 Lotto#validate()
     * [x] 로또 번호가 중복되지 않았는지 확인한다 Lotto#validate()
   * [x] 생성된 List<Lotto>를 Lottos객체에 삽입 Lottos(List<Lotto>)
-* 당첨번호를 추첨한다. WinningLotto#getWinningNumbers()
+* [x] 당첨번호를 추첨한다. WinningLotto 
+  * [x] 입력받은 당첨Lotto 저장 WinningLotto() 
+    * [x] List형태의 번호들 Lotto 객체로 저장 WinningLotto.winningLotto
+  * [x] 보너스 번호 저장 WinningLotto.bonusNumber
 * 발행한 **로또들**의 당첨 내역을 확인한다 Lottos#getWinningResults()
   * 로또 당첨 결과 확인 LottoResult#getWinningResult()
     * 발행한 하나의 로또와 당첨번호와 비교 WinningLotto#compareNumbers()
 * 1~5등 당첨 기준 LottoRank
 * 수익률을 계산한다 LottoResult#calculateProfit()
-* 
 * 입력 Input
 * 출력 Output
 * 에러시 에러 메시지 출력후 다시 입력받는다 
