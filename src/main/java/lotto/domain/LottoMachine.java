@@ -15,7 +15,7 @@ public class LottoMachine {
                 .mapToObj(unusedVariable -> new Lotto(Randoms.pickUniqueNumbersInRange(1, 45, 6)))
                 .toList();
 
-        return new Lottos(generatedLottoTickets);
+        return new Lottos(generatedLottoTickets, money);
 
     }
 

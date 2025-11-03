@@ -6,15 +6,19 @@ public class Lottos {
     //TODO: 일급 컬렉션으로 lotto 객체 저장
     List<Lotto> lottos;
     int ticketCount;
-    public Lottos(List<Lotto> LottoTickets) {
+    long money;
+
+    public Lottos(List<Lotto> LottoTickets, long money) {
         this.lottos = LottoTickets;
         this.ticketCount = lottos.size();
+        this.money = money;
     }
     
-    public LottoResult getWinningResults() {
+    public LottoResult getWinningResult() {
         //TODO: 발행한 로또들의 당첨 내역을 확인한다
-        // LottoResult#getWinningResult(Lotto)
+        LottoResult lottoResult = new LottoResult();
+//        lottoResult.addWiningResult();
 
-        return null; //임시
+        return lottoResult; //임시
     }
 }
