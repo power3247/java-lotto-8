@@ -10,7 +10,7 @@ public class LottoMachine {
 
     public Lottos issue(int money) {
         int ticketCount = calculateTicketCount(money);
-        //TODO: List<Lotto> 만들고 Lottos에 추가
+
         List<Lotto> generatedLottoTickets = IntStream.range(0, ticketCount)
                 .mapToObj(unusedVariable -> new Lotto(Randoms.pickUniqueNumbersInRange(1, 45, 6)))
                 .toList();

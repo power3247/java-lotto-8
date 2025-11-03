@@ -12,11 +12,16 @@
   * [x] 입력받은 당첨Lotto 저장 WinningLotto() 
     * [x] List형태의 번호들 Lotto 객체로 저장 WinningLotto.winningLotto
   * [x] 보너스 번호 저장 WinningLotto.bonusNumber
-* 발행한 **로또들**의 당첨 내역을 확인한다 Lottos#getWinningResults()
-  * 로또 당첨 결과 확인 LottoResult#getWinningResult()
-    * 발행한 하나의 로또와 당첨번호와 비교 WinningLotto#compareNumbers()
-* 1~5등 당첨 기준 LottoRank
-* 수익률을 계산한다 LottoResult#calculateProfit()
+* [ ] 발행한 **로또들**의 당첨 내역을 확인한다 Lottos#getWinningResults()
+  * [ ] 로또 당첨 결과 확인 LottoResult#getWinningResult()
+    * [ ] 갯수에 따른 로또 순위 찾기 
+    * [ ] 5개 일치시 보너스번호 포함 여부를 통해 2등여부 확인
+    * [x] 발행한 하나의 로또와 당첨번호 갯수 찾기 WinningLotto#getMatchNumberCount()
+      * [x] Lotto 번호가 지정된 수가 포함되어 있는지 확인기능 Lotto#isInclude()
+    * [x] 보너스 번호가 포함되어 있는지 확인 WinningLotto#getMatchBonusNumber()
+* [x] 1~5등 당첨 기준 LottoRank
+  * [x] 일치갯수와 보너스넘버 여부로 순위 반환 LottoRank.getRankTest()
+* [ ] 수익률을 계산한다 LottoResult#calculateProfit()
 * 입력 Input
 * 출력 Output
 * 에러시 에러 메시지 출력후 다시 입력받는다 

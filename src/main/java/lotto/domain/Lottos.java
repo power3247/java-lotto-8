@@ -10,4 +10,11 @@ public class Lottos {
         this.lottos = LottoTickets;
         this.ticketCount = lottos.size();
     }
+    
+    public LottoResult getWinningResults() {
+        //TODO: 발행한 로또들의 당첨 내역을 확인한다
+        // LottoResult#getWinningResult(Lotto)
+
+        return null; //임시
+    }
 }
