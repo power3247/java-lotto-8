@@ -16,6 +16,6 @@ public class WinningLotto {
     }
 
     public boolean getMatchBonusNumber(Lotto lotto) {
-        //TODO:보너스 번호가 포함되어 있는지 확인
+        return lotto.isInclude(bonusNumber);
     }
 }
