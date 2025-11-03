@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class LottoTest {
     @Test
@@ -35,5 +36,13 @@ class LottoTest {
     void InvalidNumberTest() {
         assertThatThrownBy(() -> new Lotto(List.of(1, 2, 3, 4, 5, 46)))
                 .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void isInclude() {
+        Lotto lotto = new Lotto(List.of(1, 2, 3, 4, 5, 6));
+        assertThat(lotto.isInclude(1)).isEqualTo(true);
+        assertThat(lotto.isInclude(11)).isEqualTo(false);
+
     }
 }
