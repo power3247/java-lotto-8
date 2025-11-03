@@ -1,17 +1,20 @@
 ### 기능목록
 
-* 로또를 발행한다. LottoMachine#issue()
-  * 로또 여러개 생성 Lottos#generateLottos()
-  * 로또 번호가 1~45 인지 확인한다 Lotto#validateLotto()
-  * 로또 번호가 6개 인지 확인한다 Lotto#validateLotto()
-  * 로또 번호가 중복되지 않았는지 확인한다 Lotto#validateLotto()
+* [x] 로또를 n개 발행한다. LottoMachine#issue()  
+  * [x] 로또 금액에 맞는 갯수를 계산한다 LottoMachine#calculateTicketCount()
+  * [x] Lottos 생성 Lottos()
+  * [x] 로또 생성 Lotto(List<Integer>)
+    * [x] 로또 번호가 1~45 인지 확인한다 Lotto#validate()
+    * [x] 로또 번호가 6개 인지 확인한다 Lotto#validate()
+    * [x] 로또 번호가 중복되지 않았는지 확인한다 Lotto#validate()
+  * [x] 생성된 List<Lotto>를 Lottos객체에 삽입 Lottos(List<Lotto>)
 * 당첨번호를 추첨한다. WinningLotto#getWinningNumbers()
 * 발행한 **로또들**의 당첨 내역을 확인한다 Lottos#getWinningResults()
   * 로또 당첨 결과 확인 LottoResult#getWinningResult()
     * 발행한 하나의 로또와 당첨번호와 비교 WinningLotto#compareNumbers()
 * 1~5등 당첨 기준 LottoRank
 * 수익률을 계산한다 LottoResult#calculateProfit()
-* 로또 금액에 맞는 갯수를 계산한다 Lottos#getTicketCount()
+* 
 * 입력 Input
 * 출력 Output
 * 에러시 에러 메시지 출력후 다시 입력받는다 
