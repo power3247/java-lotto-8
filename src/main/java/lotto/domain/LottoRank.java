@@ -32,7 +32,7 @@ public enum LottoRank {
         return matchingCount;
     }
 
-    public static LottoRank getRank(int matchingCount, boolean isSecond) {
+    public static LottoRank getRank(long matchingCount, boolean isSecond) {
         if ((!isSecond) && matchingCount == THIRD.getMatchingCount()) {
             return THIRD;
         }
