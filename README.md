@@ -1,32 +1,20 @@
 ### 기능목록
-* Lotto
-  * 6개 숫자 리스트 보유
-  * 올바른 숫자 검증
-    * 6개
-    * 1~45
-    * 중복여부
-* LottoIssuance
-  * 1~45 무작위 6개 번호 생성
-  * 금액 -> 생성할 갯수 변환
-  * 갯수만큼 로또객체들 생성
-* Lottos
-  * 생성된 로또객체들 저장
-  * 각각 로또들의 당첨여부 확인
-  * 총갯수 파악
-* WinningNumbers
-  * 당첨번호 6개 보유
-  * 보너스번호 1개 보유
-  * 당첨 여부 확인
-* LottoRank.enum
-  * 각 등수기준
-  * 등수별 상금
-  * 일치갯수로 등수 찾아주기 
-* LottoResult
-  * 수익율 계산
-  * 총 당첨금 계산
-  * map 형태로 결과 보유
-* Input
-* Output
+
+* 로또를 발행한다. LottoMachine#issue()
+  * 로또 여러개 생성 Lottos#generateLottos()
+  * 로또 번호가 1~45 인지 확인한다 Lotto#validateLotto()
+  * 로또 번호가 6개 인지 확인한다 Lotto#validateLotto()
+  * 로또 번호가 중복되지 않았는지 확인한다 Lotto#validateLotto()
+* 당첨번호를 추첨한다. WinningLotto#getWinningNumbers()
+* 발행한 **로또들**의 당첨 내역을 확인한다 Lottos#getWinningResults()
+  * 로또 당첨 결과 확인 LottoResult#getWinningResult()
+    * 발행한 하나의 로또와 당첨번호와 비교 WinningLotto#compareNumbers()
+* 1~5등 당첨 기준 LottoRank
+* 수익률을 계산한다 LottoResult#calculateProfit()
+* 로또 금액에 맞는 갯수를 계산한다 Lottos#getTicketCount()
+* 입력 Input
+* 출력 Output
+* 에러시 에러 메시지 출력후 다시 입력받는다 
  
 ### 기능 요구 사항
 #### 간단한 로또 발매기를 구현한다. (bold 핵심 개념, 객체후보)
@@ -47,3 +35,4 @@
 * 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시키고, "[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
 * Exception이 아닌 IllegalArgumentException, IllegalStateException 등과 같은 명확한 유형을 처리한다.
 
+1~45 까지의 서로 다른 임의의수 6개인 로또번호를 생성한다
